@@ -1,0 +1,31 @@
+<form class="container-fluid" (submit)="fn1()" [ngStyle]="{'background-color': color}">
+    <!-- User Name: <input type="text" name="" id="" class="form-control" [value]="name">     -->
+    User Name: <input type="text" name="username" id="" class="form-control" [(ngModel)]="username">    
+    Password: <input type="password" name="password" id="" class="form-control" [(ngModel)]="password" >
+    <!-- <input type="button" value="Login" class="btn btn-success" (click)="fn1()">&nbsp; -->
+    Color: <select name="color" id="" class="form-control" [(ngModel)]="color">
+        <option>Blue</option>
+        <option>Green</option>
+        <option>Yellow</option>
+        <option>Orange</option>
+        <option>Red</option>        
+    </select><br>
+    Gender: <input type="radio" name="gender" id="" value="Female" [(ngModel)]="gender">Female &nbsp;
+    <input type="radio" name="gender" id="" value="Male" [(ngModel)]="gender">Male &nbsp;
+    <input type="radio" name="gender" id="" value="Other" [(ngModel)]="gender">Other &nbsp;
+<br>
+    Interests:
+    <input type="checkbox" name="interests" id="" value="Education" [(ngModel)]="interests[0]" >Education
+    <input type="checkbox" name="interests" id="" value="Sports" [(ngModel)]="interests[1]">Sports
+    <input type="checkbox" name="interests" id="" value="Music" [(ngModel)]="interests[2]">Music
+    <input type="checkbox" name="interests" id="" value="Arts" [(ngModel)]="interests[3]">Arts
+    <input type="checkbox" name="interests" id="" value="Science" [(ngModel)]="interests[4]">Science
+    
+    
+
+
+    <input type="submit" value="Login" class="btn btn-success">&nbsp;
+    <input type="reset" value="Reset" class="btn btn-warning">
+</form>
+<br>
+{{interests}}
